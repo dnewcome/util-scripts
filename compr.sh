@@ -5,5 +5,7 @@
 for i in *.wav; 
 do
 	lame -V 0 "$i" "${i%.*}.mp3" 
-	rm -f *.wav
+	if [ "$?" -eq "0" ]; then
+		rm -f *.wav
+	fi
 done
