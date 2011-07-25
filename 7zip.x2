@@ -1,0 +1,8 @@
+## add this to xplorer2 user commands.
+## the command goes in the 'description' field
+## the > character is required by xplorer2 to 
+## execute an external command. 7z.bat is installed
+## by batbelt and points to the local cache or 
+## remote repository.
+ 
+> 7z.bat x -o$B $N
