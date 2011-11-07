@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# note that this script must be run as root - sudo will result in 
-# permission denied errors.
-# note that the paths are slightly different than they were with my 
-# old thinkpad.
+# This script sets the trackpoint (nub) sensitivity on the Lenovo
+# x200. An earlier version of this script set the same on the 
+# Lenovo T61. The only difference was the exact path to the
+# trackpoint device.
+
+# note that this script must be run as root  
 
 # recommended settings sensitivity: 255, speed: 150
 echo -n 255 > /sys/devices/platform/i8042/serio1/sensitivity
