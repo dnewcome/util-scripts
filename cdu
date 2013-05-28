@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# "cd up" - move up $1 directories
+# http://alan.dipert.org/post/61540754/bash-moving-up-n-directories
+function cdu {
+  num=$1
+  while [ $num -gt 0 ]; do
+    cd ..
+    num=$(( $num - 1 ))
+  done
+}

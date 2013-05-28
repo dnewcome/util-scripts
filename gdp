@@ -1,0 +1,10 @@
+#!/bin/bash
+# git diff previous version of a file 
+
+if [ ${1}x != x ] 
+	then
+		git diff master~1:$1 $1
+	else
+		echo git diff previous version of a file on master branch 
+		echo git diff master~1:file.c file.c 
+fi

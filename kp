@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# shortcut to run KeepPass using Wine 
+wine ~/bin/keepass1/KeePass.exe &

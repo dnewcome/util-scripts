@@ -1,0 +1,72 @@
+#!/bin/bash
+
+## context - get relevant things into scope on the commandline.
+## basically glorified named locations.
+
+## installation notes:
+## put ctx in the path, /usr/bin maybe
+## put the following ctx function in .bashrc
+## function ctx { . ctx $*; }
+## the reason for this is that this script cannot modify
+## the calling environment without being run in that 
+## shell, not a subshell. We do this using the . command.
+
+## philosopy - 
+# all commands are intended to be as brief as possible.
+# for this reason the current directory is used as the 
+# value for all set actions. In order to name a location
+# cd to it first, then perform command. This may be 
+# changed later, but for now, that's the breaks.
+
+## usage: ctx g foo - go to foo.
+## ctx g - list out locations.
+
+## future features ##
+
+# change prompt color
+# automatically start new shell tabset/gnu screen
+# use 'cx' or 'ct' for shortcuts?
+# cxr for 'context goto root" 
+
+case $1 in 
+	l)
+		## load a context
+		## TODO: implement
+		;;
+	n)
+		## name a context
+		## also saves to disk
+		CTX_CURR=$2
+		;;
+	s)
+		## s, set. we need to export to see
+		## later using `env`
+		eval export CTX_$2=`pwd`
+		;;
+	g)
+		## go, if no arg, list possible destinations
+		if [ ${2}x != x ]
+			then
+				eval cd \$CTX_$2
+			else
+				## TODO: strip CTX_ prefix to show just name
+				echo; echo where do you want to go?
+				env | grep CTX
+				echo
+		fi
+		;;
+	r)
+		## special destination called 'root'
+		if [ ${2}x != x ]
+			then
+				cd $CTX_R
+			else
+				eval export CTX_R=`pwd`
+		fi
+		;;
+	*)
+		echo set and load environment contexts
+		echo s - set, g - go r - root 
+		echo current context is $CTX_CURR
+		;;
+esac
