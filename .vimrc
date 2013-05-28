@@ -1,3 +1,13 @@
+" vim plugins required
+" winmanager
+" http://www.vim.org/scripts/download_script.php?src_id=754
+"
+" buffer explorer
+" http://www.vim.org/scripts/download_script.php?src_id=20031
+"
+" xml editing
+" http://www.vim.org/scripts/download_script.php?src_id=16076
+
 set nowrap
 set ruler
 set shiftwidth=4
@@ -31,4 +41,13 @@ filetype plugin on
 " :colorscheme evening
 "
 
-:command Ide 40vsplit | E
+" Ide requires winmanager
+" http://www.vim.org/scripts/script.php?script_id=95
+:command Ide call InternalIde()
+
+" set set up windowmanager with focus on the file explorer pane
+" use :qa to exit all windows 
+:function InternalIde()
+:  WMToggle 
+:  FirstExplorerWindow 
+:endfunction
