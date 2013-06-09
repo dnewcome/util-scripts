@@ -12,12 +12,19 @@ set nowrap
 set ruler
 set shiftwidth=4
 set tabstop=4
+syntax on
 
 " enable switching away from a modified buffer without saving
 set hidden
 
+:set backupdir=~/tmp
+:set dir=~/tmp
+
 " map double space to go to next window
-" :nmap <SPACE><SPACE> <C-w>w
+:nmap <SPACE><SPACE> <C-w>w
+
+" map double semicolon to go to next buffer 
+:nmap ;; :bn<CR>
 
 " maps space and j/k to page up and down
 " note that you have to hit the space bar each time

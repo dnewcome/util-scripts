@@ -7,7 +7,8 @@ alias ls='ls -F'
 PATH=$PATH:$HOME/bin
 
 # enable custom 'recent' command hook
-PROMPT_COMMAND='r log $PWD'
+# PROMPT_COMMAND='r log $PWD'
+PROMPT_COMMAND='prompt_hook.sh'
 
 # enable vi line editing 
 set -o vi
