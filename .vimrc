@@ -23,8 +23,11 @@ set hidden
 " map double space to go to next window
 :nmap <SPACE><SPACE> <C-w>w
 
-" map double semicolon to go to next buffer 
-:nmap ;; :bn<CR>
+" map to go to next buffer 
+:nmap <SPACE>; :bn<CR>
+
+" last recently used
+:nmap ;; :e#<CR>
 
 " maps space and j/k to page up and down
 " note that you have to hit the space bar each time
@@ -58,3 +61,11 @@ filetype plugin on
 :  WMToggle 
 :  FirstExplorerWindow 
 :endfunction
+
+" set 1 character gutter on left
+set foldcolumn=1
+highlight foldcolumn ctermbg=0
+
+" bufexplorer mode in winmanager not working for some reason.
+" disable per http://www.vim.org/scripts/script.php?script_id=1440
+let g:winManagerWindowLayout = "FileExplorer" 
