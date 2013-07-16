@@ -1,6 +1,7 @@
 # switch between color listing and typographical file type/folder listing
-# alias ls='ls -FG'
-alias ls='ls -F'
+alias ls='ls -FG'
+# alias ls='ls -F'
+alias his='history'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
