@@ -1,0 +1,3 @@
+Some files are hard linked in place for convenience.
+TODO: maybe they should be symlinks, but git doesn't follow them by default
+maybe there is a better way
