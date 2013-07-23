@@ -6,6 +6,7 @@ alias gs='git status'
 alias his='history'
 alias ga='git add'
 alias gc='git commit -m'
+alias pj='pbpaste | python -mjson.tool'
 
 # enable vi line editing 
 set -o vi
