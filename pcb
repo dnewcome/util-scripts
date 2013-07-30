@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+"""
+git pull current branch
+
+does a pull 
+
+--  this needs some work .. we want to constrain which branch we are on
+"""
+
+import subprocess, re
+process = subprocess.Popen(['git', 'branch'], stdout = subprocess.PIPE)
+out, err = process.communicate()
+
+branch_name = re.search("\* (\w+)", out).group(1)
+
+subprocess.call(["git", "pull", "origin", branch_name])
