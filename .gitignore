@@ -1,0 +1,4 @@
+# set with
+# git config --global core.excludesfile /Users/dnewcome/.gitignore
+.dan
+
