@@ -16,3 +16,4 @@ set -o vi
 # user profile bin path
 PATH=$PATH:$HOME/bin
 
+export PYTHONSTARTUP=~/.shell_imports.py
