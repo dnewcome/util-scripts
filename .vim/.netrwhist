@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/dnewcome/sandbox/bryce-docusign'
+let g:netrw_dirhist_2='/Users/dnewcome/sandbox/docusign/bryce/.idea'
+let g:netrw_dirhist_3='/Users/dnewcome/sandbox/docusign/dan/.git'
+let g:netrw_dirhist_4='/Users/dnewcome/.vim/doc'
