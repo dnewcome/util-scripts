@@ -9,6 +9,10 @@ alias ga='git add'
 alias gc='git commit -m'
 alias pj='pbpaste | python -mjson.tool'
 alias pg='ping google.com'
+alias mp='bin/python manage.py'
+alias sb='cd ~/sandbox'
+alias e='exit'
+alias sp='bin/python manage.py shell_plus'
 
 # enable vi line editing 
 set -o vi
