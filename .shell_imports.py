@@ -1,4 +1,5 @@
 print "importing local customizations"
+print "_list_helpers() to list defined functions"
 
 # TODO: guard this somehow so if we fire up the 
 # normal python interpreter we don't see an error
