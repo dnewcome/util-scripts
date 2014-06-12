@@ -1,0 +1,4 @@
+#!/bin/bash
+# template touch - like touch but it copies a default file template
+echo 'usage: ttouch <extension> <name>'
+cp ~/.templates/$1 ./$2.$1
