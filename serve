@@ -1,0 +1,3 @@
+# serve current directory on www
+# symlink the current directory to www folder 
+ln -s `pwd` /usr/local/var/www
