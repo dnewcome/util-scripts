@@ -1,0 +1,1 @@
+grep -r `cat .gitignore | sed s/^/--exclude-dir=/ | sed -e "s/\\///g" | xargs` --exclude-dir=.git $1 .
