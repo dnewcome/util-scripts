@@ -1,1 +1,2 @@
+# recursive grep with some common nodejs project locations filtered out
 grep -r --exclude-dir=coverage --exclude-dir=artifacts --exclude-dir=build --exclude-dir=components-dist --exclude-dir=node_modules --exclude-dir=.git $1 .
