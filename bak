@@ -1,0 +1,11 @@
+# create/swap backup file
+# if <filename>.bak exists, save current and replace with backup
+
+cp "$1" _"$1"
+
+if [ -f "$1".bak ];
+then
+    mv "$1".bak "$1"
+fi
+
+mv _"$1" "$1".bak
